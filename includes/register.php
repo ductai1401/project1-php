@@ -6,7 +6,7 @@
                     Ho và tên
                 </label>
                 <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="plese inter email" name="email">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="plese inter fullname" name="fullname">
                 </div>
             </div>
 

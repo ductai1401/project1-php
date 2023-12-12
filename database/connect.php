@@ -1,10 +1,10 @@
 <?php 
-    $conn = mysqli_connect('localhost', 'root' ,'');
+    $conn = mysqli_connect('localhost', 'root' ,'', 'bannha');
         if(!$conn){
             die("connect failds");
         }
     if(isset($_POST['submit'])){
-        $conn = mysqli_connect('localhost', 'root' ,'');
+        $conn = mysqli_connect('localhost', 'root' ,'','bannha');
         $email = $_POST['email'];
         $password = $_POST['password'];
         if($conn){
