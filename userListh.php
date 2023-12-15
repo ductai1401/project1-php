@@ -1,4 +1,7 @@
 
+<?php
+  updateRow();
+?>
 <table class="table">
   <thead>
     <tr>
