@@ -94,21 +94,31 @@ include "connect.php";
         }
 
 // ==========================================================================
-function login($email,$pasword){
+function login($email,$password){
     global $conn;
     if(isset($_POST['login'])){
-        echo $_POST['email'];
-        // $email = $_POST['email'];
-        // $password = $_POST['password'];
-        // $fullName = $_POST['fullname'];
-        // $query = "INSERT INTO users(Email, Password, FullName) VALUES('$email','$password','$fullName')";  
-        // $result = mysqli_query($conn, $query);
+        $password = mysqli_real_escape_string($conn, $password);
+        
+        $query = "SELECT * FROM users WHERE Email = '".$_POST['email']."'AND Password ='".$_POST['password']."'";  
+        $result = mysqli_query($conn, $query);
+        echo $query;
+        if(!$result){
+            die("query failed !!!".mysqli_error());
+        } 
+            while($row = mysqli_fetch_assoc($result)) {
+            $db_email = $row['email'];
+            $db_password = $row['password'];
+            $db_fullname = $row['fullname'];
+            if($password === $db_password && $email === $db_email){
+                $_SESSION['email'] = $db_email;
+                $_SESSION['fullname'] = $db_fullname;
+                header('location: /admin');
+            } else {
+                header('location: /login');
+            }
 
-        // if(!$result){
-        //     die("query failed !!!".mysqli_error());
-        // } else {
-        //     echo "Record Create";
-        // }
+            }
+        
     }
 }
 // ======================kết thúc phần login================================

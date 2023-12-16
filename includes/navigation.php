@@ -22,10 +22,10 @@
         </li>
         <li class="nav-item">
         
-          <a class="nav-link" href="login.php"> Logout</a>
+          <a class="nav-link" href="#"> Logout</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="True">
             Admin
           </a>
           <ul class="dropdown-menu">
