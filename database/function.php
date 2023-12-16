@@ -93,6 +93,24 @@ include "connect.php";
             }
         }
 
+// ==========================================================================
+function login($email,$pasword){
+    global $conn;
+    if(isset($_POST['login'])){
+        echo $_POST['email'];
+        // $email = $_POST['email'];
+        // $password = $_POST['password'];
+        // $fullName = $_POST['fullname'];
+        // $query = "INSERT INTO users(Email, Password, FullName) VALUES('$email','$password','$fullName')";  
+        // $result = mysqli_query($conn, $query);
 
+        // if(!$result){
+        //     die("query failed !!!".mysqli_error());
+        // } else {
+        //     echo "Record Create";
+        // }
+    }
+}
+// ======================kết thúc phần login================================
 
 ?>
